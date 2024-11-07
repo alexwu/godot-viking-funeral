@@ -38,7 +38,7 @@ env:
 jobs:
   export_windows:
     name: Windows Export
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     if: ${{ github.event.inputs.export_platform == 'windows' || github.event.inputs.export_platform == 'all' }}
     container:
       image: barichello/godot-ci:4.3
@@ -73,7 +73,7 @@ jobs:
 
   export_linux:
     name: Linux Export
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     if: ${{ github.event.inputs.export_platform == 'linux' || github.event.inputs.export_platform == 'all' }}
     container:
       image: barichello/godot-ci:4.3
@@ -108,7 +108,7 @@ jobs:
 
   export_web:
     name: Web Export
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     if: ${{ github.event.inputs.export_platform == 'web' || github.event.inputs.export_platform == 'all' }}
     container:
       image: barichello/godot-ci:4.3
@@ -149,7 +149,7 @@ jobs:
 
   export_mac:
     name: Mac Export
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     if: ${{ github.event.inputs.export_platform == 'macos' || github.event.inputs.export_platform == 'all' }}
     container:
       image: barichello/godot-ci:4.3
