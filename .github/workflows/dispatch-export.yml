@@ -17,7 +17,7 @@ on:
       export_name:
         description: "Export Name"
         required: true
-        default: "godot-game-template"
+        default: viking-funeral
       itch_io:
         description: "Itch.io Build"
         required: false
@@ -55,7 +55,7 @@ jobs:
           mkdir -v -p build/windows
           godot -v --export-release "Windows Desktop" ./build/windows/$EXPORT_NAME.exe
       - name: Upload Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: Windows
           path: ${{ env.EXPORT_FOLDER }}/build/windows
@@ -90,7 +90,7 @@ jobs:
           mkdir -v -p build/linux
           godot -v --export-release "Linux/X11" ./build/linux/$EXPORT_NAME.x86_64
       - name: Upload Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: Linux
           path: ${{ env.EXPORT_FOLDER }}/build/linux
@@ -166,7 +166,7 @@ jobs:
           mkdir -v -p build/mac
           godot -v --export-release "Mac OSX" ./build/mac/$EXPORT_NAME.zip
       - name: Upload Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: Mac
           path: ${{ env.EXPORT_FOLDER }}/build/mac
