@@ -11,7 +11,7 @@ permissions:
 
 env:
   GODOT_VERSION: 4.3
-  EXPORT_NAME: godot-game-template
+  EXPORT_NAME: viking-funeral
   ITCH_IO: false #set to true if you want to enable automatic itch.io deploy
 
 jobs:
@@ -62,7 +62,7 @@ jobs:
       - name: Setup
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
-          mv -v /root/.local/share/godot/templates/* ~/.local/share/godot/export_templates/
+          mv -v /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/
       - name: Linux Build
         run: |
           mkdir -v -p builds/linux
@@ -97,7 +97,7 @@ jobs:
       - name: Setup
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
-          mv -v /root/.local/share/godot/templates/* ~/.local/share/godot/export_templates/
+          mv -v /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/
       - name: Web Build
         run: |
           mkdir -v -p builds/web
@@ -144,7 +144,7 @@ jobs:
       - name: Setup
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
-          mv -v /root/.local/share/godot/templates/* ~/.local/share/godot/export_templates/
+          mv -v /root/.local/share/godot/export_templates/* ~/.local/share/godot/export_templates/
       - name: Mac Build
         run: |
           mkdir -v -p builds/mac
