@@ -3,6 +3,33 @@ on:
   pull_request:
     branches:
       - main
+  workflow_call:
+    inputs:
+      godot_version:
+        description: "Godot Version"
+        required: true
+        type: string
+        default: "4.3"
+      export_platform:
+        description: "Export Platform - all|windows|linux|web|macos"
+        required: true
+        type: string
+        default: "all"
+      export_folder:
+        description: "Export Folder - Repository Path"
+        required: true
+        type: string
+        default: "."
+      export_name:
+        description: "Export Name"
+        required: true
+        type: string
+        default: viking-funeral
+      itch_io:
+        description: "Itch.io Build"
+        required: false
+        type: boolean
+        default: false
   workflow_dispatch:
     inputs:
       godot_version:
@@ -42,7 +69,7 @@ jobs:
   export_windows:
     name: Windows Export
     runs-on: ubuntu-24.04
-    if: ${{ github.event.inputs.export_platform == 'windows' || github.event.inputs.export_platform == 'all' }}
+    if: ${{ github.event.inputs.export_platform == 'windows' || github.event.inputs.export_platform == 'all' || github.event_name == 'pull_request' }}
     container:
       image: barichello/godot-ci:4.3
     steps:
@@ -77,7 +104,7 @@ jobs:
   export_linux:
     name: Linux Export
     runs-on: ubuntu-24.04
-    if: ${{ github.event.inputs.export_platform == 'linux' || github.event.inputs.export_platform == 'all' }}
+    if: ${{ github.event.inputs.export_platform == 'linux' || github.event.inputs.export_platform == 'all' || github.event_name == 'pull_request' }}
     container:
       image: barichello/godot-ci:4.3
     steps:
@@ -112,7 +139,7 @@ jobs:
   export_web:
     name: Web Export
     runs-on: ubuntu-24.04
-    if: ${{ github.event.inputs.export_platform == 'web' || github.event.inputs.export_platform == 'all' }}
+    if: ${{ github.event.inputs.export_platform == 'web' || github.event.inputs.export_platform == 'all' || github.event_name == 'pull_request' }}
     container:
       image: barichello/godot-ci:4.3
     steps:
@@ -153,7 +180,7 @@ jobs:
   export_mac:
     name: Mac Export
     runs-on: ubuntu-24.04
-    if: ${{ github.event.inputs.export_platform == 'macos' || github.event.inputs.export_platform == 'all' }}
+    if: ${{ github.event.inputs.export_platform == 'macos' || github.event.inputs.export_platform == 'all' || github.event_name == 'pull_request' }}
     container:
       image: barichello/godot-ci:4.3
     steps:
