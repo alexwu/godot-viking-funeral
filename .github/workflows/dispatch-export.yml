@@ -40,6 +40,13 @@ on:
         description: "Export Platform - all|windows|linux|web|macos"
         required: true
         default: "all"
+        type: choice
+        options:
+         - all
+         - windows
+         - linux
+         - web
+         - macos
       export_folder:
         description: "Export Folder - Repository Path"
         required: true
