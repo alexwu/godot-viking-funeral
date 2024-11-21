@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj8ng3g8ubp01"
-path="res://.godot/imported/whiterclouds.png-477426c64b7ca5f55dc6f18ce5002ca0.ctex"
+uid="uid://bpx7ar8ihe7xi"
+path="res://.godot/imported/moreglowingclouds.png-0208fdcfe358a8cd296e68381ee45ac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background art/whiterclouds.png"
-dest_files=["res://.godot/imported/whiterclouds.png-477426c64b7ca5f55dc6f18ce5002ca0.ctex"]
+source_file="res://assets/background_art/moreglowingclouds.png"
+dest_files=["res://.godot/imported/moreglowingclouds.png-0208fdcfe358a8cd296e68381ee45ac7.ctex"]
 
 [params]
 
