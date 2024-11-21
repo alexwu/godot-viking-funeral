@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5cf6finmlt1b"
-path="res://.godot/imported/moredarkclouds.png-35e97a49b8149a95bef56744d5e1da29.ctex"
+path="res://.godot/imported/moredarkclouds.png-2d63ebd8fd9fb784ead3abe8679b298d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background art/moredarkclouds.png"
-dest_files=["res://.godot/imported/moredarkclouds.png-35e97a49b8149a95bef56744d5e1da29.ctex"]
+source_file="res://assets/background_art/moredarkclouds.png"
+dest_files=["res://.godot/imported/moredarkclouds.png-2d63ebd8fd9fb784ead3abe8679b298d.ctex"]
 
 [params]
 

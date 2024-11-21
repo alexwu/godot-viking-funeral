@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8qcsgdsepfm0"
-path="res://.godot/imported/mistybackgroundwithmountains.png-b2b00d63d80dc63d9f8a3c89dcbf6d40.ctex"
+uid="uid://dj8ng3g8ubp01"
+path="res://.godot/imported/whiterclouds.png-a71f74185ff300fd3ef264f3e3adae7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background art/mistybackgroundwithmountains.png"
-dest_files=["res://.godot/imported/mistybackgroundwithmountains.png-b2b00d63d80dc63d9f8a3c89dcbf6d40.ctex"]
+source_file="res://assets/background_art/whiterclouds.png"
+dest_files=["res://.godot/imported/whiterclouds.png-a71f74185ff300fd3ef264f3e3adae7c.ctex"]
 
 [params]
 

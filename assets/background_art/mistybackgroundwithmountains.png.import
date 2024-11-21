@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coca1b1xnh2e2"
-path="res://.godot/imported/darkclouds.png-3358dd3e2d6cfd123687e0ff062b2fd9.ctex"
+uid="uid://b8qcsgdsepfm0"
+path="res://.godot/imported/mistybackgroundwithmountains.png-38f8ff3a256a850181ef7fb0e9f12951.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background art/darkclouds.png"
-dest_files=["res://.godot/imported/darkclouds.png-3358dd3e2d6cfd123687e0ff062b2fd9.ctex"]
+source_file="res://assets/background_art/mistybackgroundwithmountains.png"
+dest_files=["res://.godot/imported/mistybackgroundwithmountains.png-38f8ff3a256a850181ef7fb0e9f12951.ctex"]
 
 [params]
 
