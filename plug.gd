@@ -1,3 +1,4 @@
+# gdlint: disable=max-line-length
 extends "res://addons/gd-plug/plug.gd"
 
 func _plugging():
