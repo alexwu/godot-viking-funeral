@@ -26,6 +26,7 @@ Transitions="*res://addons/ggt-core/transitions/transitions.tscn"
 Scenes="*res://addons/ggt-core/scenes/scenes.gd"
 Utils="*res://addons/ggt-core/utils/utils.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
 
 [category]
 
@@ -38,7 +39,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/gd-plug-ui/plugin.cfg", "res://addons/ggt-core/plugin.cfg", "res://addons/ggt-debug-shortcuts/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/gd-plug-ui/plugin.cfg", "res://addons/ggt-core/plugin.cfg", "res://addons/ggt-debug-shortcuts/plugin.cfg", "res://addons/script-tabs/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
 
 [gui]
 
