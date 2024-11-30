@@ -4,13 +4,16 @@ extends CharacterBody2D
 @export var texture: Texture2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var _gravity = 4500
 
 # Called when the node enters the scene tree for the first time.
-# func _ready() -> void:
-#	if texture:
-#		sprite_2d.texture = texture
+func _ready() -> void:
+	animation_player.play("idle")
+	if texture:
+		sprite_2d.texture = texture
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
