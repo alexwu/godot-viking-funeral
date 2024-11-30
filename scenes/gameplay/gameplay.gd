@@ -1,5 +1,7 @@
 extends Node
 
+@export var background_music: AudioStream
+
 var elapsed = 0
 
 
@@ -12,6 +14,9 @@ func pre_start(params):
 		for key in params:
 			var val = params[key]
 			printt("", key, val)
+
+	if background_music:
+		SoundManager.play_music(background_music)
 
 
 # `start()` is called after pre_start and after the graphic transition ends.
