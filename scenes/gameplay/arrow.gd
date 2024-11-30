@@ -19,8 +19,10 @@ func _physics_process(delta):
 	if linear_velocity.length() > 0:
 		rotation = linear_velocity.angle()
 
+
 func _integrate_forces(state):
 	state.apply_force(Vector2.from_angle(60))
+
 
 func _on_body_entered(body: Node) -> void:
 	hit(body)
