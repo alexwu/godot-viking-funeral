@@ -6,8 +6,6 @@ extends CharacterBody2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-var _gravity = 4500
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,8 +20,6 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	velocity.y += _gravity * delta
-
-	print(velocity)
+	velocity += get_gravity() * delta
 
 	move_and_slide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://4fyoq8npekf0"]
+[gd_scene load_steps=16 format=4 uid="uid://4fyoq8npekf0"]
 
 [ext_resource type="PackedScene" uid="uid://barl4q1kugrmm" path="res://scenes/gameplay/pause-layer/pause-layer.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://b8qcsgdsepfm0" path="res://assets/background_art/mistybackgroundwithmountains.png" id="4_0vie7"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dti770cugf65i" path="res://assets/tiles/Blocky_VikingVillage_Tileset.png" id="6_gh2sl"]
 [ext_resource type="Texture2D" uid="uid://be3lgbawy5i2t" path="res://assets/tiles/SandLight.png" id="7_l3qsv"]
 [ext_resource type="Texture2D" uid="uid://c8fxj32bewsdk" path="res://assets/tiles/Water_Option1.png" id="8_s36mt"]
+[ext_resource type="PackedScene" uid="uid://bmymh7pohe0nq" path="res://scenes/gameplay/player.tscn" id="9_gj1hb"]
 [ext_resource type="Texture2D" uid="uid://bhyb7oywtlwhv" path="res://assets/tiles/Water_Option2.png" id="9_t5j8u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ce1yg"]
@@ -5348,10 +5349,8 @@ collision_layer = 4
 collision_mask = 3
 linear_velocity = Vector2(1000, -1000)
 
-[node name="Player" type="Node2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-visible = false
-
 [node name="Edda" parent="." instance=ExtResource("5_42mvo")]
 position = Vector2(129, 866)
+
+[node name="Player" parent="." instance=ExtResource("9_gj1hb")]
+position = Vector2(272, 260)

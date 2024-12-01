@@ -2,6 +2,7 @@ extends RigidBody2D
 
 # TODO: Need to decide if something like this actually makes sense for the arrow
 const BLAST_IMPULSE := 1500.0
+const GRAVITY = 200.0
 
 var arrow_direction := Vector2.ZERO:
 	set = set_arrow_direction
@@ -11,7 +12,7 @@ var arrow_direction := Vector2.ZERO:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass  # Replace with function body.
+	print("Arrow spawned")
 
 
 func _physics_process(delta):
@@ -31,6 +32,7 @@ func _on_body_entered(body: Node) -> void:
 func hit(body: Node) -> void:
 	if body.has_method("take_damage"):
 		body.take_damage()
+	freeze = true
 
 
 func set_arrow_direction(new_arrow_direction: Vector2) -> void:
