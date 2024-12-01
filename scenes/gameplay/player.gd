@@ -7,19 +7,35 @@ enum STATE { IDLE, AIMING, DEAD }
 @export var max_power = 2000.0
 @export var move_speed = 300.0
 @export var jump_velocity = -400.0
+@export var arrow_spawn_distance = 50.0  # Distance from the player to spawn the arrow
 
 var current_state = STATE.IDLE
 var _aim_direction = Vector2(1, 0)
-var _power = 0.0
-const CIRCLE_RADIUS = 50.0
-const ANGULAR_SPEED = 2.0  # Radians per second
-const SPAWN_DISTANCE = 50.0  # Distance from the player to spawn the arrow
-
-# var angle = 0.0
+var _power = 100.0
 
 @onready var arrow_scene = preload("res://scenes/gameplay/arrow.tscn")
 @onready var arrow_spawn_position: Area2D = $Area2D
 @onready var trajectory_line = $Line2D
+
+
+func hit() -> void:
+	match current_state:
+		STATE.DEAD:
+			print(name + " is already dead.")
+			return
+		_:
+			_enter_state(STATE.DEAD)
+
+
+func _enter_state(new_state: STATE):
+	current_state = new_state
+	match current_state:
+		STATE.IDLE:
+			stop_aiming()
+		STATE.AIMING:
+			start_aiming()
+		STATE.DEAD:
+			GameState.player_dead = true
 
 
 func _physics_process(delta: float) -> void:
@@ -53,9 +69,9 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("aim"):
 		if !is_aiming():
-			start_aiming()
+			_enter_state(STATE.AIMING)
 	elif Input.is_action_just_released("aim"):
-		stop_aiming()
+		_enter_state(STATE.IDLE)
 
 	if is_aiming():
 		update_aiming(delta)
@@ -83,12 +99,14 @@ func update_aiming(delta):
 
 	# Calculate the angle and new spawn position
 	var angle = _aim_direction.angle()
-	var new_spawn_position = Vector2(SPAWN_DISTANCE * cos(angle), SPAWN_DISTANCE * sin(angle))
+	var new_spawn_position = Vector2(
+		arrow_spawn_distance * cos(angle), arrow_spawn_distance * sin(angle)
+	)
 
 	# Set the new spawn position relative to the player's position
 	arrow_spawn_position.global_position = global_position + new_spawn_position
 	# Increase _power based on the time the button is held
-	_power = min(_power + delta * 500, max_power)
+	_power = min(_power + delta * 5000, max_power)
 
 
 func shoot_arrow():

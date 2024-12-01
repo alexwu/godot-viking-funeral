@@ -1,12 +1,5 @@
 extends RigidBody2D
 
-# TODO: Need to decide if something like this actually makes sense for the arrow
-const BLAST_IMPULSE := 1500.0
-const GRAVITY = 200.0
-
-var arrow_direction := Vector2.ZERO:
-	set = set_arrow_direction
-
 @onready var hit_box: Area2D = $HitBox
 
 
@@ -15,27 +8,27 @@ func _ready() -> void:
 	print("Arrow spawned")
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# Update the arrow's rotation based on its velocity
-	if linear_velocity.length() > 0:
+	if !is_freeze_enabled() && linear_velocity.length() > 0:
 		rotation = linear_velocity.angle()
 
 
-func _integrate_forces(state):
-	state.apply_force(Vector2.from_angle(60))
+func _integrate_forces(_state):
+	pass
 
 
 func _on_body_entered(body: Node) -> void:
-	hit(body)
+	on_hit(body)
 
 
-func hit(body: Node) -> void:
-	if body.has_method("take_damage"):
-		body.take_damage()
-	freeze = true
+func on_hit(_body: Node) -> void:
+	# print("Arrow on_hit: " + body.name)
+	# if body.has_method("on_hit"):
+	# 	body.on_hit()
+	if !is_freeze_enabled():
+		call_deferred("set_freeze_enabled", true)
 
 
-func set_arrow_direction(new_arrow_direction: Vector2) -> void:
-	arrow_direction = new_arrow_direction
-	linear_velocity = BLAST_IMPULSE * arrow_direction
-	rotation = arrow_direction.angle()
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	on_hit(body)

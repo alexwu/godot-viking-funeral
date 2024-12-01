@@ -27,6 +27,7 @@ Scenes="*res://addons/ggt-core/scenes/scenes.gd"
 Utils="*res://addons/ggt-core/utils/utils.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
+GameState="*res://scenes/game_state.gd"
 
 [category]
 
@@ -95,6 +96,9 @@ shoot={
 2d_physics/layer_1="walls"
 2d_physics/layer_2="actors"
 2d_physics/layer_3="arrows"
+2d_physics/layer_4="water"
+2d_physics/layer_5="boat"
+2d_physics/layer_6="target"
 
 [rendering]
 

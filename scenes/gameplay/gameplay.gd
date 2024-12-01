@@ -2,6 +2,8 @@ extends Node
 
 @export var background_music: AudioStream
 
+@onready var boat: Boat = $Boat
+
 var elapsed = 0
 
 
@@ -14,6 +16,8 @@ func pre_start(params):
 		for key in params:
 			var val = params[key]
 			printt("", key, val)
+	GameState.reset()
+	boat.target_hit.connect(GameState.on_completed)
 
 	if background_music:
 		SoundManager.play_music(background_music)
@@ -26,3 +30,14 @@ func start():
 
 func _process(delta):
 	elapsed += delta
+	match GameState.current_state:
+		GameState.STATE.RUNNING:
+			pass
+		GameState.STATE.COMPLETED:
+			Game.change_scene_to_file(
+				"res://scenes/you_win/you_win.tscn", {"show_progress_bar": false}
+			)
+		_:
+			Game.change_scene_to_file(
+				"res://scenes/game_over/game_over.tscn", {"show_progress_bar": false}
+			)

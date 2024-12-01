@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bo0je1ljktgr6"]
+
+[ext_resource type="Texture2D" uid="uid://vbxgxnwru20c" path="res://assets/sprites/boat_option1.png" id="1_6kbkw"]
+[ext_resource type="Script" path="res://scenes/gameplay/boat.gd" id="1_iq0tt"]
+[ext_resource type="Texture2D" uid="uid://dbquxfjcc0jrd" path="res://assets/sprites/characters/Man_death.png" id="3_yxsnk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac53d"]
+size = Vector2(194.25, 19)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8lrlr"]
+radius = 31.0
+height = 166.0
+
+[node name="Boat" type="CharacterBody2D"]
+script = ExtResource("1_iq0tt")
+
+[node name="BoatSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_6kbkw")
+hframes = 4
+vframes = 2
+frame = 3
+
+[node name="BodySprite2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-16, -57)
+scale = Vector2(4, 4)
+texture = ExtResource("3_yxsnk")
+hframes = 4
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.125, 28.5)
+shape = SubResource("RectangleShape2D_ac53d")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(-4, 22)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8lrlr")
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

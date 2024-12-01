@@ -36,10 +36,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y42b2"]
-size = Vector2(21.3883, 50.0084)
+size = Vector2(17.1609, 12.0372)
 
 [node name="Arrow" type="RigidBody2D"]
 texture_filter = 1
+disable_mode = 1
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_8nwgt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -53,9 +56,14 @@ sprite_frames = SubResource("SpriteFrames_4a2b3")
 autoplay = "default"
 
 [node name="HitBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(19.0372, -1.58275)
 rotation = -1.54287
 shape = SubResource("RectangleShape2D_y42b2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
