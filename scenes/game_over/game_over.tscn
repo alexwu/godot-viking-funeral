@@ -1,0 +1,138 @@
+[gd_scene load_steps=5 format=3 uid="uid://bglohx0f4pkc3"]
+
+[ext_resource type="Script" path="res://scenes/game_over/game_over.gd" id="1_h1qpq"]
+[ext_resource type="FontFile" uid="uid://da2t6lyf41wty" path="res://assets/fonts/open-sans/open-sans-bold.ttf" id="2_fgwqd"]
+[ext_resource type="Script" path="res://scenes/menu/game_version.gd" id="3_iqds2"]
+[ext_resource type="Script" path="res://scenes/menu/godot_version.gd" id="4_h63yj"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h1qpq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Control/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/Control/VBoxContainer2/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fgwqd")
+theme_override_font_sizes/font_size = 60
+text = "GAME OVER"
+uppercase = true
+
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/Control/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/Control/VBoxContainer2/CenterContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_fgwqd")
+theme_override_font_sizes/font_size = 42
+text = "You couldn't hit the boat"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="RetryButton" type="Button" parent="MarginContainer/Control/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 2
+text = "TRY AGAIN"
+
+[node name="Version" type="VBoxContainer" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_right = 122.0
+grow_vertical = 0
+
+[node name="GameVersion" type="Label" parent="MarginContainer/Control/Version"]
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+text = "<x.y.z>"
+script = ExtResource("3_iqds2")
+
+[node name="GodotVersion" type="Label" parent="MarginContainer/Control/Version"]
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+theme_override_colors/font_color = Color(0.92549, 0.92549, 0.92549, 1)
+text = "<GodotVersion>"
+script = ExtResource("4_h63yj")
+
+[node name="Credits" type="VBoxContainer" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -86.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MadeByLabel" type="Label" parent="MarginContainer/Control/Credits"]
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "made by: ..."
+
+[node name="Developer1" type="Label" parent="MarginContainer/Control/Credits"]
+visible = false
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+theme_override_colors/font_color = Color(0.92549, 0.92549, 0.92549, 1)
+
+[node name="Developer2" type="Label" parent="MarginContainer/Control/Credits"]
+visible = false
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+theme_override_colors/font_color = Color(0.886275, 0.87451, 0.87451, 1)
+text = "Developer 2"
+
+[node name="Developer3" type="Label" parent="MarginContainer/Control/Credits"]
+visible = false
+layout_mode = 2
+theme_type_variation = &"LabelSmall"
+theme_override_colors/font_color = Color(0.886275, 0.87451, 0.87451, 1)
+text = "Developer 3"
+
+[connection signal="pressed" from="MarginContainer/Control/VBoxContainer2/VBoxContainer/RetryButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/VBoxContainer2/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

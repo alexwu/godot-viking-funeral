@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmymh7pohe0nq"]
+
+[ext_resource type="Script" path="res://scenes/gameplay/player.gd" id="1_wxtdv"]
+[ext_resource type="Texture2D" uid="uid://pi285q0gjhl" path="res://assets/sprites/characters/Ivar1_v004-Full.png" id="2_iq74h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hnqax"]
+radius = 32.0
+height = 86.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_wxtdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_iq74h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_hnqax")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(74, -1)
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+width = 3.0
