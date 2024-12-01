@@ -1,6 +1,17 @@
 extends Control
 
 @onready var retry_button = $MarginContainer/Control/VBoxContainer2/VBoxContainer/RetryButton
+@onready
+var game_over_message: Label = $MarginContainer/Control/VBoxContainer2/CenterContainer2/Title
+
+
+func pre_start(params):
+	var cur_scene: Node = get_tree().current_scene
+	print("Scene loaded: ", cur_scene.name, " (", cur_scene.scene_file_path, ")")
+	if params:
+		var message = params["message"]
+		if message != null:
+			game_over_message.text = message
 
 
 func _ready():

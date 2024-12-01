@@ -36,6 +36,7 @@ func _enter_state(new_state: STATE):
 			start_aiming()
 		STATE.DEAD:
 			GameState.player_dead = true
+			GameState.current_state = GameState.STATE.PLAYER_DEAD
 
 
 func _physics_process(delta: float) -> void:

@@ -1,6 +1,6 @@
 extends Node
 
-enum STATE { RUNNING, PLAYER_DEAD, NPCS_DEAD, FAILED, COMPLETED }
+enum STATE { RUNNING, PLAYER_DEAD, EDDA_DEAD, NPCS_DEAD, FAILED, COMPLETED }
 
 @export var scene_progress = "start"
 @export var current_state: STATE = STATE.RUNNING
@@ -20,6 +20,7 @@ func reset():
 
 func is_running() -> bool:
 	return current_state == STATE.RUNNING
-	
+
+
 func on_completed() -> void:
 	current_state = STATE.COMPLETED
