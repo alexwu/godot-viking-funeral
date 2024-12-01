@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://4fyoq8npekf0"]
+[gd_scene load_steps=20 format=4 uid="uid://4fyoq8npekf0"]
 
 [ext_resource type="PackedScene" uid="uid://barl4q1kugrmm" path="res://scenes/gameplay/pause-layer/pause-layer.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://b8qcsgdsepfm0" path="res://assets/background_art/mistybackgroundwithmountains.png" id="4_0vie7"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bo0je1ljktgr6" path="res://scenes/gameplay/boat.tscn" id="10_8a4ob"]
 [ext_resource type="Texture2D" uid="uid://coca1b1xnh2e2" path="res://assets/background_art/darkclouds.png" id="11_r7c8n"]
 [ext_resource type="PackedScene" uid="uid://cs3kw3rljgk8h" path="res://scenes/gameplay/torben.tscn" id="12_ay8tt"]
+[ext_resource type="AudioStream" uid="uid://cnnyom41j46cv" path="res://assets/music/gameplay_music/vikingFuneral.wav" id="14_x4uqi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ce1yg"]
 texture = ExtResource("6_gh2sl")
@@ -5646,4 +5647,9 @@ position = Vector2(662, 1091)
 dialogue_name = "Torben"
 
 [node name="Player" parent="." instance=ExtResource("9_gj1hb")]
-position = Vector2(471, 1118)
+position = Vector2(168, 1095)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_x4uqi")
+autoplay = true
+stream_paused = true

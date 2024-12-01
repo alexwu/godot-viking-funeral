@@ -20,6 +20,7 @@ func hit() -> void:
 			match name:
 				"Edda":
 					GameState.edda_dead = true
+					GameState.current_state = GameState.STATE.EDDA_DEAD
 				"Torben":
 					GameState.torben_dead = true
 				_:

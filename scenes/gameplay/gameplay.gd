@@ -37,6 +37,23 @@ func _process(delta):
 			Game.change_scene_to_file(
 				"res://scenes/you_win/you_win.tscn", {"show_progress_bar": false}
 			)
+		GameState.STATE.PLAYER_DEAD:
+			Game.change_scene_to_file(
+				"res://scenes/game_over/game_over.tscn",
+				{
+					"show_progress_bar": false,
+					"message": "Well Ivar, you hit yourself with your own arrow and died."
+				}
+			)
+		GameState.STATE.EDDA_DEAD:
+			Game.change_scene_to_file(
+				"res://scenes/game_over/game_over.tscn",
+				{
+					"show_progress_bar": false,
+					"message":
+					"You hit Edda with your arrow. She’s still alive, but extremely pissed."
+				}
+			)
 		_:
 			Game.change_scene_to_file(
 				"res://scenes/game_over/game_over.tscn", {"show_progress_bar": false}
