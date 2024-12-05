@@ -5581,7 +5581,6 @@ sources/3 = SubResource("TileSetAtlasSource_t83dy")
 script = ExtResource("5")
 
 [node name="PauseLayer" parent="." instance=ExtResource("2")]
-visible = false
 
 [node name="Background" type="TextureRect" parent="."]
 texture_filter = 1
@@ -5652,4 +5651,3 @@ position = Vector2(168, 1095)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_x4uqi")
 autoplay = true
-stream_paused = true
