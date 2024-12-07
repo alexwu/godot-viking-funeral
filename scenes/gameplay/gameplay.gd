@@ -4,6 +4,7 @@ extends Node
 
 @onready var boat: Boat = $Boat
 
+var dialogue = load("res://dialogue/start.dialogue")
 var elapsed = 0
 
 
@@ -19,6 +20,10 @@ func pre_start(params):
 	GameState.reset()
 	boat.target_hit.connect(GameState.on_completed)
 
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	DialogueManager.passed_title.connect(_on_title_passed)
+	DialogueManager.got_dialogue.connect(_on_dialogue)
+
 	if background_music:
 		SoundManager.play_music(background_music)
 
@@ -26,10 +31,10 @@ func pre_start(params):
 # `start()` is called after pre_start and after the graphic transition ends.
 func start():
 	print("gameplay.gd: start() called")
+	DialogueManager.show_dialogue_balloon(dialogue, "start_ivar_the_archer")
 
 
-func _process(delta):
-	elapsed += delta
+func _process(_delta):
 	match GameState.current_state:
 		GameState.STATE.RUNNING:
 			pass
@@ -58,3 +63,15 @@ func _process(delta):
 			Game.change_scene_to_file(
 				"res://scenes/game_over/game_over.tscn", {"show_progress_bar": false}
 			)
+
+
+func _on_dialogue_ended(_resource):
+	pass
+
+
+func _on_title_passed(title):
+	pass
+
+
+func _on_dialogue(next_dialogue):
+	pass
