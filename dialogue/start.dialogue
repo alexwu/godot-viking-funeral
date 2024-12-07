@@ -1,14 +1,14 @@
 ~ start
 
-EDDA: Thar goes me only brothar. 
-	His corpse floating out to sea. 
+EDDA: Thar goes me only brothar. His corpse floating out to sea. 
 	If only I could’ve seen how he perished.
 
 TORBEN: Ye did all ye could, Edda.
 
 EDDA: All that remains is for Ivar to fire a flaming arrow onto the boat and complete the ceremony.
 
-IVAR: Indeed. I am Ivar. And I will now light the boat on fire with this arrow so thy brothar hath safe passage to the afterlife.
+IVAR: Indeed. I am Ivar. 
+	And I will now light the boat on fire with this arrow so thy brothar hath safe passage to the afterlife.
 
 #(Ivar completely misses.)
 
@@ -22,7 +22,8 @@ TORBEN: …
 
 EDDA: …
 
-EDDA: What?!?! Me brothar’s body floats further! With haste, Ivar! Remember to breathe and HOLD SHIFT while you aim.
+EDDA: What?!?! Me brothar’s body floats further! 
+	With haste, Ivar! Remember to breathe and HOLD SHIFT while you aim.
 
 IVAR: Breathe and HOLD SHIFT. That makes sense. I CAN DO THIS.
 
@@ -34,13 +35,15 @@ EDDA: I’LL DESTROY YOU-
 
 IVAR: ANOTHER CHANCE EDDA, THAT’S ALL I ASK-
 
-TORBEN: EDDA! EDDA! WAIT - He mustn’t know about PRESSING SPACE BAR to reduce wind effect on his arrows.
+TORBEN: EDDA! EDDA! WAIT - 
+	He mustn’t know about PRESSING SPACE BAR to reduce wind effect on his arrows.
 
 IVAR: Alas, I did not. Thanks, Torben. I will honor thy brothar now, Edda.
 
 EDDA: …Just hurry before he is gone for eternity.
 
-IVAR: Remember Ivar - breathe and HOLD SHIFT to aim and PRESS SPACE BAR to reduce wind effect. Then, onwards to Edda’s good graces.
+IVAR: Remember Ivar - breathe and HOLD SHIFT to aim and PRESS SPACE BAR to reduce wind effect. 
+	Then, onwards to Edda’s good graces.
 
 #PLAYER FIRES HERE
 
@@ -54,11 +57,19 @@ EDDA: …
 
 TORBEN: …
 
-IVAR: ‘Twas I with thy brothar in his final hours. I’d known him since our first days of Viking Funeral Archer Training. Humorous, that is, seeing as-
+IVAR: ‘Twas I with thy brothar in his final hours. I’d known him since our first days of Viking Funeral Archer Training. 
+	Humorous, that is, seeing as-
 
 EDDA: TELL THY TALE.
 
-IVAR: Thy brothar was fed up with the training, wishing to defeat a great serpent beast nearby camp to prove his worth, thus defying orders. One night, unbeknownst to thy brothar, he awoke me as he went off alone into the dark wood. I followed and witnessed what I believe to be the finest archery I will hath seen in me lifetime. Thy brothar pierced each and every eye of the great serpent, leaping from tree branch to tree branch. I stood in amazement. So much so that I failed to notice a broken tree branch near his person until it was too late. By Ullr, he nearly achieved his wish. If only I hath said something. For ‘twas that one branch that collapsed with nothing to break his fall, which caused his untimely demise. And only I remained, without movement, as the great serpent escaped.
+IVAR: Thy brothar was fed up with the training, wishing to defeat a great serpent beast nearby camp to prove his worth, thus defying orders. 
+	One night, unbeknownst to thy brothar, he awoke me as he went off alone into the dark wood. 
+	I followed and witnessed what I believe to be the finest archery I will hath seen in me lifetime. 
+	Thy brothar pierced each and every eye of the great serpent, leaping from tree branch to tree branch. 
+	I stood in amazement. So much so that I failed to notice a broken tree branch near his person until it was too late. 
+	By Ullr, he nearly achieved his wish. If only I hath said something. 
+	For ‘twas that one branch that collapsed with nothing to break his fall, which caused his untimely demise. 
+	And only I remained, without movement, as the great serpent escaped.
 
 EDDA: …
 
@@ -84,13 +95,16 @@ IVAR: But the boat…thy brothar…
 
 #(The boat returns.)
 
-EDDA: Look, the mighty winds hath brought him back. As if the gods themselves wish to give thee a second chance.
+EDDA: Look, the mighty winds hath brought him back. 
+	As if the gods themselves wish to give thee a second chance.
 
 IVAR: Edda, I must admit, I am unsure if you’ve noticed, but I hath been feeling extremely insecure.
 
-EDDA: Oh I’ve noticed. Here, take me horn of mead to boost thee confidence. TAP M to take a nice swig before you fire. A little trick I learned from me brothar.
+EDDA: Oh I’ve noticed. Here, take me horn of mead to boost thee confidence. 
+	TAP M to take a nice swig before you fire. A little trick I learned from me brothar.
 
-IVAR: Huzzah! Firing arrows with mead in me system will surely work! Thus I will now breathe and HOLD SHIFT to aim, PRESS SPACE BAR to reduce wind effect, and TAP M to drink mead and boost me confidence.
+IVAR: Huzzah! Firing arrows with mead in me system will surely work! 
+	Thus I will now breathe and HOLD SHIFT to aim, PRESS SPACE BAR to reduce wind effect, and TAP M to drink mead and boost me confidence.
 
 #LAYER FIRES HERE
 
@@ -104,7 +118,10 @@ EDDA: …
 
 IVAR: …
 
-EDDA: All this hath made me question our tradition. Do we really know why we do this in the first place? How does burning a body signify passage to the afterlife? Also, why don’t we just set the body on fire first, then float it out to sea?
+EDDA: All this hath made me question our tradition. 
+	Do we really know why we do this in the first place? 
+	How does burning a body signify passage to the afterlife? 
+	Also, why don’t we just set the body on fire first, then float it out to sea?
 
 IVAR: …
 
