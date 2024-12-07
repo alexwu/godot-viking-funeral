@@ -31,7 +31,7 @@ func pre_start(params):
 # `start()` is called after pre_start and after the graphic transition ends.
 func start():
 	print("gameplay.gd: start() called")
-	DialogueManager.show_dialogue_balloon(dialogue, "start_ivar_the_archer")
+	DialogueManager.show_dialogue_balloon(dialogue, "i_am_ivar")
 
 
 func _process(_delta):
