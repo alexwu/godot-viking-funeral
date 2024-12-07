@@ -1,4 +1,4 @@
-~ start_ivar_the_archer
+~ i_am_ivar
 
 EDDA: Thar goes me only brothar. His corpse floating out to sea. 
 
@@ -10,7 +10,10 @@ EDDA: All that remains is for Ivar to fire a flaming arrow onto the boat and com
 
 IVAR: Indeed. I am Ivar. And I will now light the boat on fire with this arrow so thy brothar hath safe passage to the afterlife.
 
+=> END
+
 #(Ivar completely misses.)
+~ hold_shift
 
 IVAR: ****
 
@@ -28,7 +31,10 @@ EDDA: With haste, Ivar! Remember to breathe and HOLD SHIFT while you aim.
 
 IVAR: Breathe and HOLD SHIFT. That makes sense. I CAN DO THIS.
 
+=> END
+
 #PLAYER FIRES HERE
+~ press_space_bar
 
 IVAR: Methinks that was the wind.
 
@@ -48,7 +54,10 @@ IVAR: Remember Ivar - breathe and HOLD SHIFT to aim and PRESS SPACE BAR to reduc
 
 IVAR: Then, onwards to Edda’s good graces.
 
+=> END
+
 #PLAYER FIRES HERE
+~ ivar_monologue
 
 EDDA: …
 
@@ -85,6 +94,10 @@ EDDA: …
 
 EDDA: Ivar the Archer…thou hath one more try.
 
+=> END
+
+~ torben_death_scene
+
 #PLAYER FIRES HERE
 
 #(TORBEN FALLS TO HIS DEATH.)
@@ -97,7 +110,10 @@ EDDA: Praise be to Ullr, I did NOT want to pillage with him.
 
 IVAR: But the boat…thy brothar…
 
+=> END
+
 #(The boat returns.)
+~ the_boat_returns
 
 EDDA: Look, the mighty winds hath brought him back. 
 EDDA: As if the gods themselves wish to give thee a second chance.
@@ -110,7 +126,10 @@ EDDA: TAP M to take a nice swig before you fire. A little trick I learned from m
 IVAR: Huzzah! Firing arrows with mead in me system will surely work! 
 IVAR: Thus I will now breathe and HOLD SHIFT to aim, PRESS SPACE BAR to reduce wind effect, and TAP M to drink mead and boost me confidence.
 
-#LAYER FIRES HERE
+=> END
+
+#PLAYER FIRES HERE
+~ question_tradition
 
 #(The now-flaming boat floats away…)
 
